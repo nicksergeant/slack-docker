@@ -37,10 +37,10 @@ handle = (event) ->
         notify container.Name, "Started #{event.from}."
     when 'die', 'kill'
       containers.get event.id, (container) ->
-        notify container.Name, "Stopped #{event.from}"
+        notify container.Name, "Stopped #{event.from}."
     when 'destroy'
       containers.getAndRemove event.id, (container) ->
-        notify container.Name, "Removed #{event.from}"
+        notify container.Name, "Removed #{event.from}."
 
 notify = (name, text, fields) ->
   slack.send
