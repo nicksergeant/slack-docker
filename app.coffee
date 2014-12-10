@@ -45,7 +45,7 @@ handle = (event) ->
 notify = (name, text, fields) ->
   slack.send
     username: "Docker"
-    icon: 'http://i.imgur.com/lyiBNWv.png'
+    icon_url: 'http://i.imgur.com/lyiBNWv.png'
     channel: ''
     text: text
     fields: fields
